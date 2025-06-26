@@ -12,3 +12,9 @@ class BankAccounts:
         return self.pin == input_pin
 
     def withdraw(self, amount):
+        if amount <= 0:
+            return "Invalid amount."
+        if amount > self.balance:
+            return "Insufficient funds."
+        self.balance -= amount
+        return "Success"
