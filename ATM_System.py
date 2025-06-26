@@ -30,3 +30,17 @@ class BankAccounts:
 
 class ATMApp:
     def __init__(self, window):
+        self.window = window
+        self.window.geometry("500x500")
+        self.window.title("Banko De Cora")
+        self.window.config(background="#ff6ec7")
+
+        self.accounts = [
+            BankAccounts("1234", 10000.0, "Patricia Gwyneth"),
+            BankAccounts("0309", 10000.0, "Jian Christian")
+        ]
+
+        self.current_account = None
+        self.request_counter = 0
+
+        self.build_login_screen()
