@@ -46,3 +46,19 @@ class ATMApp:
         self.build_login_screen()
 
     def build_login_screen(self):
+        self.frame = Frame(self.window, background="#ff69b4")
+        self.frame.pack()
+
+        Label(self.frame, text="Welcome to Jhered's ATM Banking", font=("Arial", 17, "bold"),
+              background="#ffefa1").pack(pady=20)
+        Label(self.frame, text="Enter PIN", font=("Arial", 14, "bold"), background="#ff69b4").pack()
+
+        self.pin_entry = Entry(self.frame, font=("Arial", 17), show="*", width=6)
+        self.pin_entry.pack()
+
+        self.error_label = Label(self.frame, text="", font=("Arial", 12), background="#ff69b4")
+        self.error_label.pack()
+
+        Button(self.window, text="Confirm", command=self.login).pack()
+
+        def login(self):
