@@ -10,3 +10,5 @@ class BankAccounts:
 
     def check_pin(self, input_pin):
         return self.pin == input_pin
+
+    def withdraw(self, amount):
