@@ -70,3 +70,5 @@ class ATMApp:
                 self.show_menu()
                 return
         self.error_label.config(text="Invalid PIN. Try again.", fg="red")
+
+    def show_menu(self):
