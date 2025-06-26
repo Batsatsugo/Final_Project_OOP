@@ -20,3 +20,7 @@ class BankAccounts:
         return "Success"
 
     def deposit(self, amount):
+        if amount <= 0:
+            return "Invalid amount."
+        self.balance += amount
+        return "Success"
