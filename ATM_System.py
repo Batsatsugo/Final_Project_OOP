@@ -24,3 +24,5 @@ class BankAccounts:
             return "Invalid amount."
         self.balance += amount
         return "Success"
+
+    def change_pin(self, new_pin):
