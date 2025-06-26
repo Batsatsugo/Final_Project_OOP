@@ -18,3 +18,5 @@ class BankAccounts:
             return "Insufficient funds."
         self.balance -= amount
         return "Success"
+
+    def deposit(self, amount):
