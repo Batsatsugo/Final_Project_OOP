@@ -90,3 +90,6 @@ class ATMApp:
         Button(self.menu_window, text="Logout", font=("Arial", 14), command=self.logout).pack(pady=5)
 
     def logout(self):
+        if messagebox.askyesno("Logout", f"Are you sure you want to log out?\nTotal Requests: {self.request_counter}"):
+            self.menu_window.destroy()
+            main()
