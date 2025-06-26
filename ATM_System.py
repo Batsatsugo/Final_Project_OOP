@@ -160,3 +160,7 @@ class ATMApp:
         entry.pack()
 
         def confirm():
+            new_pin = entry.get()
+            self.current_account.change_pin(new_pin)
+            messagebox.showinfo("Success", "PIN changed successfully!")
+            win.destroy()
