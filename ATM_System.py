@@ -169,3 +169,4 @@ class ATMApp:
         Button(win, text="Cancel", command=win.destroy).pack(pady=5)
 
     def update_balance(self):
+        self.balance_label.config(text=f"Balance: ₱{self.current_account.balance:.2f}")
