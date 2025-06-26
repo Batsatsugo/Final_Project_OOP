@@ -180,3 +180,5 @@ class ATMApp:
         Date & Time: {timestamp}
         ************************************
         """
+
+        self.show_receipt(receipt_text)
