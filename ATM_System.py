@@ -26,3 +26,4 @@ class BankAccounts:
         return "Success"
 
     def change_pin(self, new_pin):
+        self.pin = new_pin
