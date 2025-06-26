@@ -149,3 +149,12 @@ class ATMApp:
         Button(win, text="Cancel", command=win.destroy).pack(pady=5)
 
     def change_pin_window(self):
+        self.request_counter += 1
+        win = Toplevel(self.menu_window)
+        win.geometry("200x200")
+        win.title("Change PIN")
+        win.config(background="#ffefa1")
+
+        Label(win, text="Enter new PIN:", background="#ffefa1").pack()
+        entry = Entry(win)
+        entry.pack()
