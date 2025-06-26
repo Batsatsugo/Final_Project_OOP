@@ -122,3 +122,12 @@ class ATMApp:
         Button(win, text="Cancel", command=win.destroy).pack(pady=5)
 
     def deposit_window(self):
+        self.request_counter += 1
+        win = Toplevel(self.menu_window)
+        win.geometry("300x300")
+        win.title("Deposit")
+        win.config(background="#ff69b4")
+
+        Label(win, text="Enter amount:", background="#ff69b4").pack()
+        entry = Entry(win)
+        entry.pack()
