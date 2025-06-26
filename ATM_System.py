@@ -196,3 +196,10 @@ class ATMApp:
         text.pack(pady=5, padx=10)
 
         Button(win, text="Close", command=win.destroy).pack(pady=10)
+
+def main():
+    root = Tk()
+    ATMApp(root)
+    root.mainloop()
+
+main()
