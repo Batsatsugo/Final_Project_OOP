@@ -88,3 +88,5 @@ class ATMApp:
         Button(self.menu_window, text="Deposit", font=("Arial", 14), command=self.deposit_window).pack(pady=5)
         Button(self.menu_window, text="Change PIN", font=("Arial", 14), command=self.change_pin_window).pack(pady=5)
         Button(self.menu_window, text="Logout", font=("Arial", 14), command=self.logout).pack(pady=5)
+
+    def logout(self):
