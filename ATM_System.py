@@ -93,3 +93,5 @@ class ATMApp:
         if messagebox.askyesno("Logout", f"Are you sure you want to log out?\nTotal Requests: {self.request_counter}"):
             self.menu_window.destroy()
             main()
+
+    def withdraw_window(self):
