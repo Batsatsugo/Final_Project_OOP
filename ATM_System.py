@@ -95,3 +95,12 @@ class ATMApp:
             main()
 
     def withdraw_window(self):
+        self.request_counter += 1
+        win = Toplevel(self.menu_window)
+        win.geometry("200x200")
+        win.title("Withdraw")
+        win.config(background="#ffefa1")
+
+        Label(win, text="Enter amount:", background="#ffefa1").pack()
+        entry = Entry(win)
+        entry.pack()
