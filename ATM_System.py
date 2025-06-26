@@ -158,3 +158,5 @@ class ATMApp:
         Label(win, text="Enter new PIN:", background="#ffefa1").pack()
         entry = Entry(win)
         entry.pack()
+
+        def confirm():
