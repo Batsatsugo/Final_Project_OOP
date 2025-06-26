@@ -182,3 +182,5 @@ class ATMApp:
         """
 
         self.show_receipt(receipt_text)
+
+    def show_receipt(self, receipt_text):
