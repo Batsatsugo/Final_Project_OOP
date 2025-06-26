@@ -106,3 +106,14 @@ class ATMApp:
         entry.pack()
 
         def confirm():
+            try:
+                amount = float(entry.get())
+                result = self.current_account.withdraw(amount)
+                if result == "Success":
+                    self.update_balance()
+                    self.generate_receipt("Withdrawal", amount)
+                    win.destroy()
+                else:
+                    messagebox.showerror("Error", result)
+            except:
+                messagebox.showerror("Error", "Invalid input")
