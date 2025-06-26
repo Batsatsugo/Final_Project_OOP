@@ -131,3 +131,5 @@ class ATMApp:
         Label(win, text="Enter amount:", background="#ff69b4").pack()
         entry = Entry(win)
         entry.pack()
+
+        def confirm():
