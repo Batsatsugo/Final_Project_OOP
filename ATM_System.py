@@ -62,3 +62,11 @@ class ATMApp:
         Button(self.window, text="Confirm", command=self.login).pack()
 
         def login(self):
+            input_pin = self.pin_entry.get()
+            for acc in self.accounts:
+                if acc.check_pin(input_pin):
+                    self.current_account = acc
+                    self.window.destroy()
+                    self.show_menu()
+                    return
+            self.error_label.config(text="Invalid PIN. Try again.", fg="red")
