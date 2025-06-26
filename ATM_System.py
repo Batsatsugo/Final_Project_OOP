@@ -170,3 +170,5 @@ class ATMApp:
 
     def update_balance(self):
         self.balance_label.config(text=f"Balance: ₱{self.current_account.balance:.2f}")
+
+    def generate_receipt(self, transaction_type, amount):
