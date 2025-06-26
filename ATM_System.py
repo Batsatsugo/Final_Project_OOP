@@ -7,3 +7,5 @@ class BankAccounts:
         self.pin = pin
         self.balance = balance
         self.name = name
+
+    def check_pin(self, input_pin):
