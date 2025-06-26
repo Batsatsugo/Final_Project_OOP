@@ -164,3 +164,6 @@ class ATMApp:
             self.current_account.change_pin(new_pin)
             messagebox.showinfo("Success", "PIN changed successfully!")
             win.destroy()
+
+        Button(win, text="Confirm", command=confirm).pack(pady=5)
+        Button(win, text="Cancel", command=win.destroy).pack(pady=5)
