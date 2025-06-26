@@ -120,3 +120,5 @@ class ATMApp:
 
         Button(win, text="Confirm", command=confirm).pack(pady=5)
         Button(win, text="Cancel", command=win.destroy).pack(pady=5)
+
+    def deposit_window(self):
