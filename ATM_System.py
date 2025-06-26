@@ -29,3 +29,4 @@ class BankAccounts:
         self.pin = new_pin
 
 class ATMApp:
+    def __init__(self, window):
