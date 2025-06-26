@@ -184,3 +184,15 @@ class ATMApp:
         self.show_receipt(receipt_text)
 
     def show_receipt(self, receipt_text):
+        win = Toplevel()
+        win.geometry("350x250")
+        win.title("Transaction Receipt")
+        win.config(background="white")
+
+        Label(win, text="Transaction Receipt", font=("Arial", 14, "bold"), background="white").pack(pady=10)
+        text = Text(win, font=("Arial", 12), background="white")
+        text.insert(END, receipt_text)
+        text.config(state=DISABLED)
+        text.pack(pady=5, padx=10)
+
+        Button(win, text="Close", command=win.destroy).pack(pady=10)
