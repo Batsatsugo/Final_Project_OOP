@@ -49,8 +49,8 @@ class ATMApp:
         self.frame = Frame(self.window, background="#ff69b4")
         self.frame.pack()
 
-        Label(self.frame, text="Welcome to Jhered's ATM Banking", font=("Arial", 17, "bold"),
-              background="#ffefa1").pack(pady=20)
+        Label(self.frame, text="Welcome to Banko De Cora's ATM System", font=("Arial", 17, "bold"),
+              background="#ff69b4").pack(pady=20)
         Label(self.frame, text="Enter PIN", font=("Arial", 14, "bold"), background="#ff69b4").pack()
 
         self.pin_entry = Entry(self.frame, font=("Arial", 17), show="*", width=6)
@@ -72,3 +72,19 @@ class ATMApp:
         self.error_label.config(text="Invalid PIN. Try again.", fg="red")
 
     def show_menu(self):
+        self.menu_window = Tk()
+        self.menu_window.geometry("500x500")
+        self.menu_window.title("ATM Menu")
+        self.menu_window.config(background="#ff69b4")
+
+        Label(self.menu_window, text=f"Welcome {self.current_account.name}", font=("Arial", 17, "bold"),
+              background="#ff69b4").pack(pady=20)
+
+        self.balance_label = Label(self.menu_window, text=f"Balance: ₱{self.current_account.balance:.2f}",
+                                   font=("Arial", 14), background="#ff69b4")
+        self.balance_label.pack()
+
+        Button(self.menu_window, text="Withdraw", font=("Arial", 14), command=self.withdraw_window).pack(pady=5)
+        Button(self.menu_window, text="Deposit", font=("Arial", 14), command=self.deposit_window).pack(pady=5)
+        Button(self.menu_window, text="Change PIN", font=("Arial", 14), command=self.change_pin_window).pack(pady=5)
+        Button(self.menu_window, text="Logout", font=("Arial", 14), command=self.logout).pack(pady=5)
