@@ -172,3 +172,11 @@ class ATMApp:
         self.balance_label.config(text=f"Balance: ₱{self.current_account.balance:.2f}")
 
     def generate_receipt(self, transaction_type, amount):
+        timestamp = datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S")
+        receipt_text = f"""
+        ********** Banko De Cora Banking **********
+        Transaction Type: {transaction_type}
+        Amount: ₱{amount:.2f}
+        Date & Time: {timestamp}
+        ************************************
+        """
