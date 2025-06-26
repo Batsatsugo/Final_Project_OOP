@@ -27,3 +27,5 @@ class BankAccounts:
 
     def change_pin(self, new_pin):
         self.pin = new_pin
+
+class ATMApp:
