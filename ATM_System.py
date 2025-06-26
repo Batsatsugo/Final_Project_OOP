@@ -44,3 +44,5 @@ class ATMApp:
         self.request_counter = 0
 
         self.build_login_screen()
+
+    def build_login_screen(self):
