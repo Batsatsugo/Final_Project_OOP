@@ -9,3 +9,4 @@ class BankAccounts:
         self.name = name
 
     def check_pin(self, input_pin):
+        return self.pin == input_pin
