@@ -143,4 +143,7 @@ class ATMApp:
                 else:
                     messagebox.showerror("Error", result)
             except:
-                messagebox.showerror("Error", "Invalid input")q
+                messagebox.showerror("Error", "Invalid input")
+
+        Button(win, text="Confirm", command=confirm).pack(pady=5)
+        Button(win, text="Cancel", command=win.destroy).pack(pady=5)
